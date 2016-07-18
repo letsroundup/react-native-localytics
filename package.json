@@ -1,0 +1,33 @@
+{
+  "name": "react-native-localytics",
+  "version": "0.1.0",
+  "description": "Native Bindings for the Localytics Library",
+  "main": "VOOLocalytics",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "react",
+    "react-component",
+    "localytics",
+    "analytics",
+    "ios"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/letsroundup/react-native-localytics.git"
+  },
+  "author": "RoundUp Social, Inc.",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/letsroundup/react-native-localytics/issues"
+  },
+  "homepage": "https://github.com/letsroundup/react-native-localytics#readme",
+  "dependencies": {
+    "fbjs": ">=0.8.3"
+  },
+  "devDependencies": {
+    "react-docgen": "^2.9.1"
+  }
+}

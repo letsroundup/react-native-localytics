@@ -31,11 +31,11 @@ Tagging events:
 - [ ] tagSearched
 - [ ] tagShared
 - [ ] tagContentRated
-- [x] tagCustomerRegistered({ customer?: Customer, methodName?: string, attribute?s: Object })
-- [x] tagCustomerLoggedIn({ customer?: Customer, methodName?: string, attributes: Object })
-- [x] tagCustomerLoggedOut({ attributes?: Object })
+- [x] `tagCustomerRegistered({ customer?: Customer, methodName?: string, attribute?s: Object })`
+- [x] `tagCustomerLoggedIn({ customer?: Customer, methodName?: string, attributes: Object })`
+- [x] `tagCustomerLoggedOut({ attributes?: Object })`
 - [ ] tagInvited
-- [x] tagEvent(eventName: string, attributes?: Object
+- [x] `tagEvent(eventName: string, attributes?: Object)`
 
 Identifying users:
 - [ ] setCustomerId

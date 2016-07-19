@@ -15,3 +15,17 @@ export type CustomerParams = {
   methodName?: string,
   attributes?: Object,
 };
+
+export type ItemParams = {
+  itemName?: string,
+  itemId?: string,
+  itemType?: string,
+  itemPrice?: number,
+  attributes?: Object,
+};
+
+export CheckoutParams = {
+  totalPrice?: number,
+  itemCount?: number,
+  attributes?: Object,
+};

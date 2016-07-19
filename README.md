@@ -15,7 +15,7 @@ Native Bindings for the [Localytics][localytics] Library. Only available on iOS 
 
 ## Usage
 
-The method names are named the same as in the [iOS SDK][sdk]. Only a few methods are implemented now, but more to come! If you need somehting particular, just open an [issue][issue]!
+The method names are named the same as in the [iOS SDK][sdk]. Only a few methods are implemented now, but more to come! If you need somehting particular, just open an [issue][issue]! 
 
 ```js
 import * as Localytics from 'react-native-localytics';
@@ -23,10 +23,10 @@ Localytics.tagEvent('eventName', { more: 'attributes' });
 ```
 
 Tagging events: 
-- [ ] tagPurchased
-- [ ] tagAddedToCart
-- [ ] tagStartedCheckout
-- [ ] tagCompletedCheckout
+- [x] `tagPurchased({ params?: ItemParams })`
+- [x] `tagAddedToCart({ params?: ItemParams})`
+- [x] `tagStartedCheckout({ params?: CheckoutParams })`
+- [x] `tagCompletedCheckout({ params?: CheckoutParams })`
 - [ ] tagContentViewed
 - [ ] tagSearched
 - [ ] tagShared
@@ -72,6 +72,26 @@ User profiles:
   lastName?: string,
   fullName?: string,
   emailAddress?: string,
+}
+```
+
+### ItemParams Object
+```
+{
+  itemName?: string,
+  itemId?: string,
+  itemType?: string,
+  itemPrice?: number,
+  attributes?: Object,
+  }
+```
+
+### CheckoutParams Object
+```
+{
+  totalPrice?: number,
+  itemCount?: number,
+  attributes?: Object,
 }
 ```
 

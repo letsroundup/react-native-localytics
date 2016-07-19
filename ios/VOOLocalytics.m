@@ -29,6 +29,48 @@ RCT_EXPORT_MODULE();
 
 # pragma mark - Exposed methods
 
+# pragma mark - Tagging Events
+
+RCT_EXPORT_METHOD(tagPurchased:(NSDictionary*)params)
+{
+  NSString* itemName = params[@"itemName"];
+  NSString* itemId = params[@"itemId"];
+  NSString* itemType = params[@"itemType"];
+  NSNumber* itemPrice = [RCTConvert NSNumber:params[@"itemPrice"]];
+  NSDictionary* attributes = params[@"attributes"];
+
+  [Localytics tagPurchased:itemName itemId:itemId itemType:itemType itemPrice:itemPrice attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagAddedToCard:(NSDictionary*)params)
+{
+  NSString* itemName = params[@"itemName"];
+  NSString* itemId = params[@"itemId"];
+  NSString* itemType = params[@"itemType"];
+  NSNumber* itemPrice = [RCTConvert NSNumber:params[@"itemPrice"]];
+  NSDictionary* attributes = params[@"attributes"];
+
+  [Localytics tagAddedToCart:itemName itemId:itemId itemType:itemType itemPrice:itemPrice attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagStartedCheckout:(NSDictionary*)params)
+{
+  NSNumber* totalPrice = [RCTConvert NSNumber:params[@"totalPrice"]];
+  NSNumber* itemCount = [RCTConvert NSNumber:params[@"itemCount"]];
+  NSDictionary* attributes = params[@"attributes"];
+
+  [Localytics tagStartedCheckout:totalPrice itemCount:itemCount attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagCompletedCheckout:(NSDictionary*)params)
+{
+  NSNumber* totalPrice = [RCTConvert NSNumber:params[@"totalPrice"]];
+  NSNumber* itemCount = [RCTConvert NSNumber:params[@"itemCount"]];
+  NSDictionary* attributes = params[@"attributes"];
+
+  [Localytics tagCompletedCheckout:totalPrice itemCount:itemCount attributes:attributes];
+}
+
 RCT_EXPORT_METHOD(tagCustomerRegistered:(NSDictionary*)params)
 {
   LLCustomer* customer = [self createCustomerFromParams:[RCTConvert NSDictionary:params[@"customer"]]];

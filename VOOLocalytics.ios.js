@@ -1,5 +1,5 @@
 /**
- * @providesModule VOOLocalytics
+ * @providesModule react-native-localytics
  * @flow
  */
 import ReactNative from 'react-native';
@@ -14,32 +14,32 @@ import type {
   CheckoutParams
 } from './VOOLocalyticsTypes';
 
-export function tagPurchased(params: ItemParams = {}) {
+export function tagPurchased(params: ItemParams = {}): void {
   VOOLocalytics.tagPurchased(params);
 }
-export function tagAddedToCard(params: ItemParams = {}) {
+export function tagAddedToCard(params: ItemParams = {}): void {
   VOOLocalytics.tagAddedToCard(params);
 }
-export function tagStartedCheckout(params: CheckoutParams = {}) {
+export function tagStartedCheckout(params: CheckoutParams = {}): void {
   VOOLocalytics.tagStartedCheckout(params);
 }
-export function tagCompletedCheckout(params: CheckoutParams = {}) {
+export function tagCompletedCheckout(params: CheckoutParams = {}): void {
   VOOLocalytics.tagCompletedCheckout(params);
 }
 
-export function tagCustomerRegistered(params: CustomerParams = {}) {
+export function tagCustomerRegistered(params: CustomerParams = {}): void {
   VOOLocalytics.tagCustomerRegistered(params);
 }
 
-export function tagCustomerLoggedIn(params: CustomerParams = {}) {
+export function tagCustomerLoggedIn(params: CustomerParams = {}): void {
   VOOLocalytics.tagCustomerLoggedIn(params);
 }
 
-export function tagCustomerLoggedOut(params?: Object = {}) {
+export function tagCustomerLoggedOut(params?: Object = {}): void {
   VOOLocalytics.tagCustomerLoggedOut(params);
 }
 
-export function tagEvent(eventName: string, attributes?: Object) {
+export function tagEvent(eventName: string, attributes?: Object): void {
   invariant(typeof eventName === 'string' && eventName.trim(), 'Event Name has to be specified');
   VOOLocalytics.tagEvent({ eventName, attributes });
 }

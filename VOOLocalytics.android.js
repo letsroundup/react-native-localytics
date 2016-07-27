@@ -1,5 +1,5 @@
 /**
- * @providesModule VOOLocalytics
+ * @providesModule react-native-localytics
  * @flow
  */
 import type { CustomerParams } from './VOOLocalyticsTypes';

@@ -24,8 +24,13 @@ export type ItemParams = {
   attributes?: Object,
 };
 
-export CheckoutParams = {
+export type CheckoutParams = {
   totalPrice?: number,
   itemCount?: number,
   attributes?: Object,
+};
+
+export type Coordinates = {
+  lng: number,
+  lat: number,
 };

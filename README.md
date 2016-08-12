@@ -39,11 +39,12 @@ Tagging events:
 - [x] `tagEvent(eventName: string, attributes?: Object)`
 
 Identifying users:
-- [ ] setCustomerId
-- [ ] setCustomerFirstName
-- [ ] setCustomerLastName
-- [ ] setCustomerFullName
-- [ ] setCustomerEmail
+- [x] `setCustomerId(id: string)`
+- [x] `setCustomerFirstName(name: string)`
+- [x] `setCustomerLastName(name: string)`
+- [x] `setCustomerFullName(name: string)`
+- [x] `setCustomerEmail(email: string)`
+- [x] `setLocation({ lng: number, lat: number })`
 
 User profiles:
 - [ ] setValue
@@ -84,7 +85,7 @@ User profiles:
   itemType?: string,
   itemPrice?: number,
   attributes?: Object,
-  }
+}
 ```
 
 ### CheckoutParams Object

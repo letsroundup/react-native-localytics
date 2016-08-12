@@ -104,4 +104,38 @@ RCT_EXPORT_METHOD(tagEvent:(NSDictionary*)params)
   [Localytics tagEvent:eventName attributes:attributes];
 }
 
+RCT_EXPORT_METHOD(setCustomerId:(NSString*)userId)
+{
+  [Localytics setCustomerId:userId];
+}
+
+RCT_EXPORT_METHOD(setCustomerFirstName:(NSString*)name)
+{
+  [Localytics setCustomerFirstName:name];
+}
+
+RCT_EXPORT_METHOD(setCustomerLastName:(NSString*)name)
+{
+  [Localytics setCustomerLastName:name];
+}
+
+RCT_EXPORT_METHOD(setCustomerFullName:(NSString*)name)
+{
+  [Localytics setCustomerFullName:name];
+}
+
+RCT_EXPORT_METHOD(setCustomerEmail:(NSString*)email)
+{
+  [Localytics setCustomerEmail:email];
+}
+
+RCT_EXPORT_METHOD(setLocation:(NSDictionary*)params)
+{
+  CLLocationCoordinate2D coords;
+  coords.longitude = [RCTConvert double:params[@"lng"]];
+  coords.latitude = [RCTConvert double:params[@"lat"]];
+  [Localytics setLocation:coords];
+}
+
+
 @end

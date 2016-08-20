@@ -14,6 +14,8 @@ Native Bindings for the [Localytics][localytics] Library. Only available on iOS 
     2. Add ATS Exception
     3. **Initialize the SDK** in your AppDelegate.m *(this is the most important step)*. This is where you will be setuping which app key to use.
 
+*Note: CocoaPods installation is also available see at the end.*
+
 ## Usage
 
 The method names are named the same as in the [iOS SDK][sdk]. Only a few methods are implemented now, but more to come! If you need somehting particular, just open an [issue][issue]! 
@@ -96,6 +98,23 @@ User profiles:
   attributes?: Object,
 }
 ```
+
+## Cocoapods
+
+First install the package with npm `npm install react-native-localytics`. Then add the following line in your Podfile
+
+```
+pod 'react-native-localytics', :path => '../node_modules/react-native-localytics'
+```
+
+If you need the static build instead of dynamic, use:
+
+```
+  pod 'react-native-localytics', :path => '../node_modules/react-native-localytics', :subspecs => [
+    'Static',
+  ]
+```
+
 
 [localytics]: http://localytics.com
 [sdk]: http://docs.localytics.com/dev/ios.html#events-ios

@@ -1,6 +1,6 @@
 #import "VOOLocalytics.h"
 
-#import "Localytics.h"
+#import <Localytics/Localytics.h>
 #import "RCTConvert.h"
 #import "RCTEventDispatcher.h"
 

@@ -13,6 +13,11 @@ import type {
   ItemParams,
   CheckoutParams,
   Coordinates,
+  ContentParams,
+  SearchParams,
+  ShareParams,
+  RatingParams,
+  InvitationParams
 } from './VOOLocalyticsTypes';
 
 export function tagPurchased(params: ItemParams = {}): void {
@@ -71,4 +76,24 @@ export function setLocation(coords: Coordinates): void {
     'Coordinates has to contain lng and lat'
   );
   VOOLocalytics.setLocation(coords);
+}
+
+export function tagContentViewed(content: ContentParams): void {
+  VOOLocalytics.tagContentViewed(content);
+}
+
+export function tagSearched(search: SearchParams): void {
+  VOOLocalytics.tagSearched(search);
+}
+
+export function tagShared(search: ShareParams): void {
+  VOOLocalytics.tagShared(Share);
+}
+
+export function tagContentRated(rating: RatingParams): void {
+  VOOLocalytics.tagContentRated(rating);
+}
+
+export function tagInvited(invitation: InvitationParams): void {
+  VOOLocalytics.tagInvited(invitation);
 }

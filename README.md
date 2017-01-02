@@ -30,14 +30,14 @@ Tagging events:
 - [x] `tagAddedToCart({ params?: ItemParams})`
 - [x] `tagStartedCheckout({ params?: CheckoutParams })`
 - [x] `tagCompletedCheckout({ params?: CheckoutParams })`
-- [ ] tagContentViewed
-- [ ] tagSearched
-- [ ] tagShared
-- [ ] tagContentRated
+- [x] `tagContentViewed({ params: ContentParams })`
+- [x] `tagSearched({ params: SearchParams })`
+- [x] `tagShared({ params: ShareParams })`
+- [x] `tagContentRated({ params: RatingParams })`
 - [x] `tagCustomerRegistered({ customer?: Customer, methodName?: string, attributes?: Object })`
 - [x] `tagCustomerLoggedIn({ customer?: Customer, methodName?: string, attributes: Object })`
 - [x] `tagCustomerLoggedOut({ attributes?: Object })`
-- [ ] tagInvited
+- [x] `tagInvited({ params: InvitationParams })`
 - [x] `tagEvent(eventName: string, attributes?: Object)`
 
 Identifying users:
@@ -95,6 +95,56 @@ User profiles:
 {
   totalPrice?: number,
   itemCount?: number,
+  attributes?: Object,
+}
+```
+
+### ContentParams Object ###
+```
+{
+  contentName?: string,
+  contentId?: string,
+  contentType?: string,
+  attributes?: Object,
+}
+```
+
+### SearchParams Object ###
+```
+{
+  searchText?: string,
+  contentType?: string,
+  resultCount?: number,
+  attributes?: Object,
+}
+```
+
+### ShareParams Object ###
+```
+{
+  shareName?: string,
+  contentId?: string,
+  contentType?: string,
+  methodName?: string,
+  attributes?: Object,
+}
+```
+
+### RatingParams Object ###
+```
+{
+  contentName?: string,
+  contentId?: string,
+  contentType?: string,
+  rating?: number,
+  attributes?: Object,
+}
+
+```
+### InvitationParams Object ###
+```
+export type Invitation = {
+  method?: string,
   attributes?: Object,
 }
 ```

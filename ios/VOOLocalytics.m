@@ -137,5 +137,70 @@ RCT_EXPORT_METHOD(setLocation:(NSDictionary*)params)
   [Localytics setLocation:coords];
 }
 
+RCT_EXPORT_METHOD(tagContentViewed:(NSDictionary*)params)
+{
+    NSString *contentName = params[@"contentName"];
+    NSString *contentId = params[@"contentId"];
+    NSString *contentType = params[@"contentType"];
+    NSDictionary* attributes = params[@"attributes"];
+    
+    [Localytics tagContentViewed:contentName
+                       contentId:contentId
+                     contentType:contentType
+                      attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagSearched:(NSDictionary*)params)
+{
+    NSString* searchText = params[@"contentName"];
+    NSNumber* resultCount = [RCTConvert NSNumber:params[@"resultCount"]];
+    NSString* contentType = params[@"contentType"];
+    NSDictionary* attributes = params[@"attributes"];
+    
+    [Localytics tagSearched:searchText
+                contentType:contentType
+                resultCount:resultCount
+                 attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagShared:(NSDictionary*)params)
+{
+    NSString *contentName = params[@"contentName"];
+    NSString *contentId = params[@"contentId"];
+    NSString *contentType = params[@"contentType"];
+    NSString *methodName = params[@"methodName"];
+    NSDictionary* attributes = params[@"attributes"];
+    
+    [Localytics tagShared:contentName
+                contentId:contentId
+              contentType:contentType
+               methodName:methodName
+               attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagContentRated:(NSDictionary*)params)
+{
+    NSString *contentName = params[@"contentName"];
+    NSString *contentId = params[@"contentId"];
+    NSString *contentType = params[@"contentType"];
+    NSNumber* rating = [RCTConvert NSNumber:params[@"rating"]];
+    NSDictionary* attributes = params[@"attributes"];
+    
+    [Localytics tagContentRated:contentName
+                      contentId:contentId
+                    contentType:contentType
+                         rating:rating
+                     attributes:attributes];
+}
+
+RCT_EXPORT_METHOD(tagInvited:(NSDictionary*)params)
+{
+    NSString *method = params[@"method"];
+    NSDictionary* attributes = params[@"attributes"];
+    
+    [Localytics tagInvited:method
+                attributes:attributes];
+}
+
 
 @end

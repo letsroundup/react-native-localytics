@@ -142,7 +142,7 @@ RCT_EXPORT_METHOD(tagContentViewed:(NSDictionary*)params)
     NSString *contentName = params[@"contentName"];
     NSString *contentId = params[@"contentId"];
     NSString *contentType = params[@"contentType"];
-    NSDictionary* attributes = params[@"attributes"];
+    NSDictionary *attributes = params[@"attributes"];
     
     [Localytics tagContentViewed:contentName
                        contentId:contentId
@@ -152,10 +152,10 @@ RCT_EXPORT_METHOD(tagContentViewed:(NSDictionary*)params)
 
 RCT_EXPORT_METHOD(tagSearched:(NSDictionary*)params)
 {
-    NSString* searchText = params[@"contentName"];
-    NSNumber* resultCount = [RCTConvert NSNumber:params[@"resultCount"]];
-    NSString* contentType = params[@"contentType"];
-    NSDictionary* attributes = params[@"attributes"];
+    NSString *searchText = params[@"contentName"];
+    NSNumber *resultCount = [RCTConvert NSNumber:params[@"resultCount"]];
+    NSString *contentType = params[@"contentType"];
+    NSDictionary *attributes = params[@"attributes"];
     
     [Localytics tagSearched:searchText
                 contentType:contentType
@@ -169,7 +169,7 @@ RCT_EXPORT_METHOD(tagShared:(NSDictionary*)params)
     NSString *contentId = params[@"contentId"];
     NSString *contentType = params[@"contentType"];
     NSString *methodName = params[@"methodName"];
-    NSDictionary* attributes = params[@"attributes"];
+    NSDictionary *attributes = params[@"attributes"];
     
     [Localytics tagShared:contentName
                 contentId:contentId
@@ -183,8 +183,8 @@ RCT_EXPORT_METHOD(tagContentRated:(NSDictionary*)params)
     NSString *contentName = params[@"contentName"];
     NSString *contentId = params[@"contentId"];
     NSString *contentType = params[@"contentType"];
-    NSNumber* rating = [RCTConvert NSNumber:params[@"rating"]];
-    NSDictionary* attributes = params[@"attributes"];
+    NSNumber *rating = [RCTConvert NSNumber:params[@"rating"]];
+    NSDictionary *attributes = params[@"attributes"];
     
     [Localytics tagContentRated:contentName
                       contentId:contentId
@@ -196,11 +196,10 @@ RCT_EXPORT_METHOD(tagContentRated:(NSDictionary*)params)
 RCT_EXPORT_METHOD(tagInvited:(NSDictionary*)params)
 {
     NSString *method = params[@"method"];
-    NSDictionary* attributes = params[@"attributes"];
+    NSDictionary *attributes = params[@"attributes"];
     
     [Localytics tagInvited:method
                 attributes:attributes];
 }
-
 
 @end

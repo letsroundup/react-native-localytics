@@ -64,8 +64,3 @@ export type RatingParams = {
   rating?: number,
   attributes?: Object,
 }
-
-export type InvitationParams = {
-  method?: string,
-  attributes?: Object,
-}

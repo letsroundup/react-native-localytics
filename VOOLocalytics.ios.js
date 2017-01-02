@@ -78,22 +78,22 @@ export function setLocation(coords: Coordinates): void {
   VOOLocalytics.setLocation(coords);
 }
 
-export function tagContentViewed(content: ContentParams): void {
+export function tagContentViewed(content: ContentParams = {}): void {
   VOOLocalytics.tagContentViewed(content);
 }
 
-export function tagSearched(search: SearchParams): void {
+export function tagSearched(search: SearchParams = {}): void {
   VOOLocalytics.tagSearched(search);
 }
 
-export function tagShared(search: ShareParams): void {
+export function tagShared(search: ShareParams = {}): void {
   VOOLocalytics.tagShared(Share);
 }
 
-export function tagContentRated(rating: RatingParams): void {
+export function tagContentRated(rating: RatingParams = {}): void {
   VOOLocalytics.tagContentRated(rating);
 }
 
-export function tagInvited(invitation: InvitationParams): void {
-  VOOLocalytics.tagInvited(invitation);
+export function tagInvited(method:string, attributes?: Object): void {
+  VOOLocalytics.tagInvited({method, attributes});
 }

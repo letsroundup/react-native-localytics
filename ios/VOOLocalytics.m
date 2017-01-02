@@ -194,7 +194,7 @@ RCT_EXPORT_METHOD(tagContentRated:(NSDictionary*)params)
 }
 
 RCT_EXPORT_METHOD(tagInvited:(NSDictionary*)params)
-{
+{   
     NSString *method = params[@"method"];
     NSDictionary *attributes = params[@"attributes"];
     

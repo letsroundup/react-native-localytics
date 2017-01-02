@@ -37,7 +37,7 @@ Tagging events:
 - [x] `tagCustomerRegistered({ customer?: Customer, methodName?: string, attributes?: Object })`
 - [x] `tagCustomerLoggedIn({ customer?: Customer, methodName?: string, attributes: Object })`
 - [x] `tagCustomerLoggedOut({ attributes?: Object })`
-- [x] `tagInvited({ params: InvitationParams })`
+- [x] `tagInvited(method: string, attributes?: Object)`
 - [x] `tagEvent(eventName: string, attributes?: Object)`
 
 Identifying users:
@@ -137,14 +137,6 @@ User profiles:
   contentId?: string,
   contentType?: string,
   rating?: number,
-  attributes?: Object,
-}
-
-```
-### InvitationParams Object ###
-```
-export type Invitation = {
-  method?: string,
   attributes?: Object,
 }
 ```

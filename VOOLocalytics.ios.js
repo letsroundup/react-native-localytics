@@ -86,8 +86,8 @@ export function tagSearched(search: SearchParams = {}): void {
   VOOLocalytics.tagSearched(search);
 }
 
-export function tagShared(search: ShareParams = {}): void {
-  VOOLocalytics.tagShared(Share);
+export function tagShared(share: ShareParams = {}): void {
+  VOOLocalytics.tagShared(share);
 }
 
 export function tagContentRated(rating: RatingParams = {}): void {

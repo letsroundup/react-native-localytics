@@ -11,7 +11,7 @@ import type {
   SearchParams,
   ShareParams,
   RatingParams,
-  InvitationParams
+  InvitationParams,
 } from './VOOLocalyticsTypes';
 
 export function tagPurchased(params = {}) {

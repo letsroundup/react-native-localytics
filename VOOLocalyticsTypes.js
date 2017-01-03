@@ -40,14 +40,14 @@ export type ContentParams = {
   contentId?: string,
   contentType?: string,
   attributes?: Object,
-}
+};
 
 export type SearchParams = {
   searchText?: string,
   contentType?: string,
   resultCount?: number,
   attributes?: Object,
-}
+};
 
 export type ShareParams = {
   shareName?: string,
@@ -55,7 +55,7 @@ export type ShareParams = {
   contentType?: string,
   methodName?: string,
   attributes?: Object,
-}
+};
 
 export type RatingParams = {
   contentName?: string,
@@ -63,4 +63,4 @@ export type RatingParams = {
   contentType?: string,
   rating?: number,
   attributes?: Object,
-}
+};

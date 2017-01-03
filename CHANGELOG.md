@@ -1,3 +1,6 @@
+# v0.4.0 - January 3rd 2016
+- Added tagContentViewed, tagSearched, tagShared, tagContentRated, tagInvited (#2)
+
 # v0.3.0 - August 11th 2016
 - Added user & location functions, namely: setCustomerId, setCustomerFirstName, setCustomerLastName, setCustomerFullName, setCustomerEmail, setLocation
 

@@ -2,7 +2,17 @@
  * @providesModule react-native-localytics
  * @flow
  */
-import type { CustomerParams } from './VOOLocalyticsTypes';
+import type {
+  CustomerParams,
+  ItemParams,
+  CheckoutParams,
+  Coordinates,
+  ContentParams,
+  SearchParams,
+  ShareParams,
+  RatingParams,
+  InvitationParams
+} from './VOOLocalyticsTypes';
 
 export function tagPurchased(params = {}) {
   console.error('tagPurchased is not implemented on Android');
@@ -55,4 +65,23 @@ export function setCustomerEmail(email: string): void {
 
 export function setLocation(coords: Coordinates): void {
   console.error('setLocation is not implemented on Android');
+}
+export function tagContentViewed(content: ContentParams = {}): void {
+  console.error('tagContentViewed is not implemented on Android');
+}
+
+export function tagSearched(search: SearchParams = {}): void {
+  console.error('tagSearched is not implemented on Android');
+}
+
+export function tagShared(search: ShareParams = {}): void {
+  console.error('tagShared is not implemented on Android');
+}
+
+export function tagContentRated(rating: RatingParams = {}): void {
+  console.error('tagContentRated is not implemented on Android');
+}
+
+export function tagInvited(method:string, attributes?: Object): void {
+  console.error('tagInvited is not implemented on Android');
 }

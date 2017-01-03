@@ -152,7 +152,7 @@ RCT_EXPORT_METHOD(tagContentViewed:(NSDictionary*)params)
 
 RCT_EXPORT_METHOD(tagSearched:(NSDictionary*)params)
 {
-    NSString *searchText = params[@"contentName"];
+    NSString *searchText = params[@"searchText"];
     NSNumber *resultCount = [RCTConvert NSNumber:params[@"resultCount"]];
     NSString *contentType = params[@"contentType"];
     NSDictionary *attributes = params[@"attributes"];

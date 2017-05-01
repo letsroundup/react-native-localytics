@@ -1,4 +1,4 @@
-# react-native-localytics
+# react-native-localytics (unofficial bindings)
 [![npm version](https://badge.fury.io/js/react-native-localytics.svg)](https://badge.fury.io/js/react-native-localytics)
 
 Native Bindings for the [Localytics][localytics] Library. Only available on iOS right now.
